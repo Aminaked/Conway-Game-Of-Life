@@ -37,12 +37,39 @@ class Game {
     }
 
     drawPulsar() {
-        // Write your function here
+        const pattern = [
+            [2,4],[3,4],[4,4],[8,4],[9,4],[10,4],
+            [0,6],[5,6],[7,6],[12,6],
+            [0,7],[5,7],[7,7],[12,7],
+            [0,8],[5,8],[7,8],[12,8],
+            [2,9],[3,9],[4,9],[8,9],[9,9],[10,9],
+            [2,11],[3,11],[4,11],[8,11],[9,11],[10,11],
+            [0,13],[5,13],[7,13],[12,13],
+            [0,14],[5,14],[7,14],[12,14],
+            [0,15],[5,15],[7,15],[12,15],
+            [2,16],[3,16],[4,16],[8,16],[9,16],[10,16]
+        ];
+        pattern.forEach(([x, y]) => {
+            this.grid[y][x] = true;
+        });
     }
 
     drawPentaDecathlon() {
-        // Write your function here
+        const pattern = [
+            [10,10],[11,10],[12,10],
+            [9,11],[13,11],
+            [9,12],[13,12],
+            [10,13],[11,13],[12,13],
+            [10,15],[11,15],[12,15],
+            [9,16],[13,16],
+            [9,17],[13,17],
+            [10,18],[11,18],[12,18]
+        ];
+        pattern.forEach(([x, y]) => {
+            this.grid[y][x] = true;
+        });
     }
+
 
     countNeighbors(x, y) {
         let count = 0;
@@ -141,9 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('pentaDecathlonBtn').addEventListener('click', () => {
-        game.drawGosperGliderGun();
+        game.drawPentaDecathlon();
         renderer.draw();
     });
+
 
     // Initial Draw
     renderer.draw();
