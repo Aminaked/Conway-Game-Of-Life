@@ -18,7 +18,7 @@ class Game {
     }
 
     drawGliderGun() {
-        // Write your function here
+        
         const metrix = [
             [26, 1],
             [24, 2], [26, 2],
@@ -34,6 +34,20 @@ class Game {
         metrix.forEach(([x, y]) => {
             this.grid[y][x] = true;
         });
+    }
+
+
+    drawLightweightSpaceship() {
+        const pattern = [
+            [1, 0], [4, 0],
+            [0, 1],
+            [0, 2], [4, 2],
+            [0, 3], [1, 3], [2, 3], [3, 3]
+        ];
+
+        pattern.forEach(([x, y]) => {
+            this.grid[y][x] = true;
+    });
     }
 
     drawPulsar() {
@@ -172,6 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderer.draw();
     });
 
+    document.getElementById('LightweightSpaceshipBtn').addEventListener('click', () => {
+        game.drawLightweightSpaceship();
+        renderer.draw();
+    });
 
     // Initial Draw
     renderer.draw();

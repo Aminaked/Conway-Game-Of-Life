@@ -32,7 +32,7 @@ h1{
 .controls {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
  padding-right: 0%;
  padding-left: 2%;
 }
@@ -55,8 +55,4 @@ button:hover {
 
 .game-body{
     display: flex;
-}
-@media (max-width:375px) {
-
-    
 }
