@@ -112,7 +112,7 @@ class Renderer {
         for (let y = 0; y < this.game.rows; y++) {
             for (let x = 0; x < this.game.cols; x++) {
                 if (this.game.grid[y][x]) {
-                    this.ctx.fillStyle = '#2c3e50';
+                    this.ctx.fillStyle = '#00ffff';
                     this.ctx.fillRect(
                         x * this.game.cellSize,
                         y * this.game.cellSize,
@@ -127,7 +127,7 @@ class Renderer {
 
 // Initialize Game
 document.addEventListener('DOMContentLoaded', () => {
-    const game = new Game(180, 360, 5);
+    const game = new Game(80, 180, 5);
     const canvas = document.getElementById('gridCanvas');
     const renderer = new Renderer(canvas, game);
     let intervalId = null;
