@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Conway's Game of Life</title>
 </head>
-
 <body>
-    <h1> Conway's Game Of Life</h1>
-    <div class="game-body">
-        <canvas id="gridCanvas"></canvas>
-        <div class="controls">
-            <button id="startBtn">Start/Stop</button>
-            <button id="clearBtn">Clear</button>
-            <button id="randomBtn">Random</button>
-            <button id="gliderGunBtn">Glider Gun</button>
-            <button id="pulsarBtn">Pulsar</button>
-            <button id="pentaDecathlonBtn">PentaDecathlon</button>
-            <button id="LightweightSpaceshipBtn">Lightweight Spaceship</button>
-
-        </div>
-        
+    <header>
+        <h1>Conway's Game of Life</h1>
+    </header>
+   <main class="game-body">
+  
+    <canvas id="gridCanvas"></canvas>
+    <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="clearBtn">Clear</button>
+        <button id="randomBtn">Randomize</button>
+        <button id="gliderGunBtn">Glider Gun</button>
+        <button id="pulsarBtn">Pulsar</button>
+        <button id="pentaDecathlonBtn">Penta Decathlon</button>
+        <button id="LightweightSpaceshipBtn">Lightweight Spaceship</button>
+        <button id="aminaBtn">AMINA</button>
+        <input type="range" id="speedSlider" min="50" max="1000" value="100">
+        <div  class="border" id="populationCounter">Population: 0</div>
     </div>
-
-    <script src="app.js"> </script>
+   
+   </main>
+  <footer>Made By Amina</footer>
+    <script src="app.js"></script>
 </body>
-
 </html>
