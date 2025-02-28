@@ -10,7 +10,7 @@ class Game {
     createEmptyGrid() {
         return Array(this.rows).fill().map(() => Array(this.cols).fill(false));
     }
-
+// patterns
     randomize() {
         
         this.grid = this.grid.map(row =>
@@ -102,23 +102,6 @@ class Game {
         return count;
     }
 
-    drawAmina() {
-        const pattern = [
-            // Coordinates for letter A
-            [5, 0], [4, 1], [6, 1], [3, 2], [7, 2], [3, 3], [4, 3], [5, 3], [6, 3], [7, 3],
-            // Coordinates for letter M
-            [10, 0], [9, 1], [10, 1], [11, 1], [12, 1], [12, 0], [13, 1], [14, 1], [15, 1],
-            // Coordinates for letter I
-            [20, 0], [20, 1], [20, 2],
-            // Coordinates for letter N
-            [25, 0], [25, 1], [25, 2], [26, 1], [27, 2],
-            // Coordinates for letter A (again)
-            [30, 0], [29, 1], [31, 1], [28, 2], [32, 2], [28, 3], [29, 3], [30, 3], [31, 3], [32, 3]
-        ];
-        pattern.forEach(([x, y]) => {
-            this.grid[y][x] = true;
-        });
-    }
 
     update() {
 
@@ -243,11 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePopulationCounter(game); 
     });
 
-    document.getElementById('aminaBtn').addEventListener('click', () => {
-        game.drawAmina();
-        renderer.draw();
-        updatePopulationCounter(game);
-    });
+  
 
     // Initial Draw
 
